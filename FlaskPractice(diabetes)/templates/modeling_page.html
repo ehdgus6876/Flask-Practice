@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            from1.submit()
+        }
+    </script>
+</head>
+<body>
+    <form action="/modeling" method="POST" name="from1">
+    <tr>
+        <th>트리글리세라이드</th>
+        <td><input type='text' name='a'></td>
+    </tr>
+    <tr>
+        <th>연령대코드(5세단위)</th>
+        <tf><input type='text' name='b'></tf>
+    </tr>
+    <tr>
+        <th>수축기혈압</th>
+        <tf><input type='text' name='c'></tf>
+    </tr>
+    
+    <tr>
+        <th>이완기혈압</th>
+        <tf><input type='text' name='e'></tf>
+    </tr>
+    <tr>
+        <th>체중(5kg단위)</th>
+        <tf><input type='text' name='f'></tf>
+    </tr>
+    <tr>
+        <th>허리둘레</th>
+        <tf><input type='text' name='g'></tf>
+    </tr>
+    <tr>
+        <th>요단백</th>
+        <tf><input type='text' name='h'></tf>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <input id= 'submit_btn' type='button' value="input" onclick="check()">
+            <input type = 'reset' value="clear">
+        </td>
+    </tr>
+    
+    </form>
+    <h3> Model 예측 결과 : {{predict}}</h3>
+</body>
+</html>
